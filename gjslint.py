@@ -13,7 +13,7 @@ from SublimeLinter.lint import Linter
 
 class GJSLint(Linter):
     language = 'javascript'
-    cmd = ('gjslint', '--nobeep', '--nosummary')
+    cmd = 'gjslint --nobeep --nosummary'
     regex = r'^Line (?P<line>\d+), (?:(?P<error>E)|(?P<warning>W)):\d+: (?P<message>[^"]+(?P<near>"[^"]+")?)$'
     comment_re = r'\s*/[/*]'
     defaults = {
