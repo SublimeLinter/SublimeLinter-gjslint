@@ -12,7 +12,7 @@ from SublimeLinter.lint import Linter
 
 
 class GJSLint(Linter):
-    language = 'javascript'
+    language = ('javascript', 'html')
     cmd = 'gjslint --nobeep --nosummary'
     regex = r'^Line (?P<line>\d+), (?:(?P<error>E)|(?P<warning>W)):\d+: (?P<message>[^"]+(?P<near>"[^"]+")?)$'
     comment_re = r'\s*/[/*]'
@@ -24,8 +24,6 @@ class GJSLint(Linter):
     inline_settings = 'max_line_length'
     inline_overrides = 'disable'
     tempfile_suffix = 'js'
-
-
-class EmbeddedGJSLint(GJSLint):
-    language = 'html'
-    selector = 'source.js.embedded.html'
+    selectors = {
+        'html': 'source.js.embedded.html'
+    }
