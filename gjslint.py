@@ -22,8 +22,8 @@ class GJSLint(Linter):
     regex = r'^Line (?P<line>\d+), (?:(?P<error>E)|(?P<warning>W)):\d+: (?P<message>[^"]+(?P<near>"[^"]+")?)$'
     comment_re = r'\s*/[/*]'
     defaults = {
-        '--jslint_error:,+': "",
-        '--disable:,': "",
+        '--jslint_error:,+': '',
+        '--disable:,': '',
         '--max_line_length:': None
     }
     inline_settings = 'max_line_length'
