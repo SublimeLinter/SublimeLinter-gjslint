@@ -10,7 +10,7 @@
 
 """This module exports the GJSLint plugin linter class."""
 
-from SublimeLinter.lint import Linter
+from SublimeLinter.lint import Linter, util
 
 
 class GJSLint(Linter):
@@ -26,6 +26,7 @@ class GJSLint(Linter):
         '--disable:,': '',
         '--max_line_length:': None
     }
+    error_stream = util.STREAM_BOTH
     inline_settings = 'max_line_length'
     inline_overrides = 'disable'
     tempfile_suffix = 'js'
