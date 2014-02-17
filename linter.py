@@ -32,3 +32,4 @@ class GJSLint(Linter):
     selectors = {
         'html': 'source.js.embedded.html'
     }
+    config_file = ('--flagfile', '.gjslintrc', '~')
