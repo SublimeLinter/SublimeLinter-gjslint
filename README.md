@@ -32,14 +32,15 @@ To install via Package Control, do the following:
 ## Settings
 For general information on how SublimeLinter works with settings, please see [Settings](http://sublimelinter.readthedocs.org/en/latest/settings.html). For information on generic linter settings, please see [Linter Settings](http://sublimelinter.readthedocs.org/en/latest/linter_settings.html).
 
-You can configure gjslint options in the package settings or in a .gjslintrc file (The linter plugin will search for a config file with that name). This is an example of a .gjslintrc file:
+You can configure gjslint options in the package settings or in a .gjslintrc file (The linter plugin will search for a config file with that name in your project path or ancestors). This is an example of a .gjslintrc file:
 ```
- --exclude_directories=reports,node_modules
+  --exclude_directories=reports,node_modules
   --exclude_files=Gruntfile.js
   --max_line_length=120
   --disable=5,240
   --custom_jsdoc_tags=namespace,version
 ```
+For Closure Linter error codes, please see the [source code](https://code.google.com/p/closure-linter/source/browse/trunk/closure_linter/errors.py).
 
 In addition to the standard SublimeLinter settings, SublimeLinter-gjslint provides its own settings. Those marked as “Inline Setting” or “Inline Override” may also be [used inline](http://sublimelinter.readthedocs.org/en/latest/settings.html#inline-settings).
 
