@@ -17,7 +17,7 @@ class GJSLint(Linter):
 
     """Provides an interface to the gjslint executable."""
 
-    syntax = ('javascript', 'javascriptnext', 'html')
+    syntax = ('javascript', 'javascript (babel)', 'javascriptnext', 'html')
     cmd = 'gjslint --nobeep --nosummary'
     regex = r'^Line (?P<line>\d+), (?:(?P<error>E)|(?P<warning>W)):\d+: (?P<message>[^"]+(?P<near>"[^"]+")?.*$)'
     comment_re = r'\s*/[/*]'
