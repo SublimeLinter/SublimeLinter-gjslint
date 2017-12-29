@@ -3,36 +3,36 @@ SublimeLinter-gjslint
 
 [![Build Status](https://travis-ci.org/SublimeLinter/SublimeLinter-gjslint.svg?branch=master)](https://travis-ci.org/SublimeLinter/SublimeLinter-gjslint)
 
-This linter plugin for [SublimeLinter](http://sublimelinter.readthedocs.org) provides an interface to [gjslint](https://developers.google.com/closure/utilities/docs/linter_howto). It will be used with files that have the “JavaScript” syntax, or within `<script>` tags in HTML files.
+This linter plugin for [SublimeLinter](https://github.com/SublimeLinter/SublimeLinter) provides an interface to [gjslint](https://developers.google.com/closure/utilities/docs/linter_howto). It will be used with files that have the “JavaScript” syntax, or within `<script>` tags in HTML files.
+
 
 ## Installation
-SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions [here](http://sublimelinter.readthedocs.org/en/latest/installation.html).
+SublimeLinter must be installed in order to use this plugin. 
 
-### Linter installation
+Please use [Package Control](https://packagecontrol.io) to install the linter plugin.
+
 Before installing this plugin, you must ensure that `gjslint` is installed on your system. To install `gjslint`, do the following:
 
 1. Install [Python](http://python.org).
 
 1. Install `gjslint` by following the [installation instructions](https://developers.google.com/closure/utilities/docs/linter_howto).
 
-### Linter configuration
-In order for `gjslint` to be executed by SublimeLinter, you must ensure that its path is available to SublimeLinter. Before going any further, please read and follow the steps in [“Finding a linter executable”](http://sublimelinter.readthedocs.org/en/latest/troubleshooting.html#finding-a-linter-executable) through “Validating your PATH” in the documentation.
+In order for `gjslint` to be executed by SublimeLinter, you must ensure that its path is available to SublimeLinter. The docs cover [troubleshooting PATH configuration](http://sublimelinter.readthedocs.io/en/latest/troubleshooting.html#finding-a-linter-executable).
 
-Once `gjslint` is installed and configured, you can proceed to install the SublimeLinter-gjslint plugin if it is not yet installed.
-
-### Plugin installation
-Please use [Package Control](https://sublime.wbond.net/installation) to install the linter plugin. This will ensure that the plugin will be updated when new versions are available. If you want to install from source so you can modify the source code, you probably know what you are doing so we won’t cover that here.
-
-To install via Package Control, do the following:
-
-1. Within Sublime Text, bring up the [Command Palette](http://docs.sublimetext.info/en/sublime-text-3/extensibility/command_palette.html) and type `install`. Among the commands you should see `Package Control: Install Package`. If that command is not highlighted, use the keyboard or mouse to select it. There will be a pause of a few seconds while Package Control fetches the list of available plugins.
-
-1. When the plugin list appears, type `gjslint`. Among the entries you should see `SublimeLinter-gjslint`. If that entry is not highlighted, use the keyboard or mouse to select it.
 
 ## Settings
-For general information on how SublimeLinter works with settings, please see [Settings](http://sublimelinter.readthedocs.org/en/latest/settings.html). For information on generic linter settings, please see [Linter Settings](http://sublimelinter.readthedocs.org/en/latest/linter_settings.html).
+- SublimeLinter settings: http://sublimelinter.readthedocs.org/en/latest/settings.html
+- Linter settings: http://sublimelinter.readthedocs.org/en/latest/linter_settings.html
 
-You can configure gjslint options in the package settings or in a .gjslintrc file (The linter plugin will search for a config file with that name in your project path or ancestors). This is an example of a .gjslintrc file:
+Additional SublimeLinter-gjslint settings: 
+
+|Setting|Description|
+|:------|:----------|
+|jslint_error|A comma-separated list of specific lint errors to check|
+|disable|A comma-separated list of error codes to ignore|
+|max_line_length|The maximum allowed line length. `null` allows any length.|
+
+We recommend configuring options in a .gjslintrc file (the linter will search for a config file with that name in your project path or ancestors). This is an example of a .gjslintrc file:
 ```
   --exclude_directories=reports,node_modules
   --exclude_files=Gruntfile.js
@@ -41,28 +41,3 @@ You can configure gjslint options in the package settings or in a .gjslintrc fil
   --custom_jsdoc_tags=namespace,version
 ```
 For Closure Linter error codes, please see the [source code](https://code.google.com/p/closure-linter/source/browse/trunk/closure_linter/errors.py).
-
-In addition to the standard SublimeLinter settings, SublimeLinter-gjslint provides its own settings. Those marked as “Inline Setting” or “Inline Override” may also be [used inline](http://sublimelinter.readthedocs.org/en/latest/settings.html#inline-settings).
-
-|Setting|Description|Inline Setting|Inline Override|
-|:------|:----------|:------------:|:-------------:|
-|jslint_error|A comma-separated list of specific lint errors to check| | |
-|disable|A comma-separated list of error codes to ignore| |&#10003;|
-|max_line_length|The maximum allowed line length. `null` allows any length.|&#10003;| |
-
-## Contributing
-If you would like to contribute enhancements or fixes, please do the following:
-
-1. Fork the plugin repository.
-1. Hack on a separate topic branch created from the latest `master`.
-1. Commit and push the topic branch.
-1. Make a pull request.
-1. Be patient.  ;-)
-
-Please note that modications should follow these coding guidelines:
-
-- Indent is 4 spaces.
-- Code should pass flake8 and pep257 linters.
-- Vertical whitespace helps readability, don’t be afraid to use it.
-
-Thank you for helping out!
