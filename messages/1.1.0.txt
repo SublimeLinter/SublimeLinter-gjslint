@@ -1,6 +1,0 @@
-SublimeLinter-gjslint
--------------------------------
-Inline settings will be deprecated in SublimeLinter 4. Please use gjslint's
-own configuration files instead.
-
-https://github.com/SublimeLinter/SublimeLinter3/blob/next/messages/4.0.0-rc.1.txt
