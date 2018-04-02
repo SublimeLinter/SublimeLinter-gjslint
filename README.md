@@ -12,13 +12,13 @@ SublimeLinter must be installed in order to use this plugin.
 
 Please use [Package Control](https://packagecontrol.io) to install the linter plugin.
 
-Before installing this plugin, you must ensure that `gjslint` is installed on your system. To install `gjslint`, do the following:
+Before installing this plugin, ensure that `gjslint` is installed on your system. To install `gjslint`, do the following:
 
 1. Install [Python](http://python.org).
 
 1. Install `gjslint` by following the [installation instructions](https://developers.google.com/closure/utilities/docs/linter_howto).
 
-In order for `gjslint` to be executed by SublimeLinter, you must ensure that its path is available to SublimeLinter. The docs cover [troubleshooting PATH configuration](http://sublimelinter.com/en/latest/troubleshooting.html#finding-a-linter-executable).
+So that `gjslint` can be executed, ensure that its path is available to SublimeLinter. The docs cover [troubleshooting PATH configuration](http://sublimelinter.com/en/latest/troubleshooting.html#finding-a-linter-executable).
 
 
 ## Settings
