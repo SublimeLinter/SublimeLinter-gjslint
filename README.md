@@ -29,14 +29,6 @@ The docs cover [troubleshooting PATH configuration](http://sublimelinter.com/en/
 - SublimeLinter settings: http://sublimelinter.com/en/latest/settings.html
 - Linter settings: http://sublimelinter.com/en/latest/linter_settings.html
 
-Additional SublimeLinter-gjslint settings: 
-
-|Setting        |Description|
-|:--------------|:----------|
-|jslint_error   |A comma-separated list of specific lint errors to check|
-|disable        |A comma-separated list of error codes to ignore|
-|max_line_length|The maximum allowed line length. `null` allows any length.|
-
 We recommend configuring options in a .gjslintrc file (the linter will search for a config file with that name in your project path or ancestors). This is an example of a .gjslintrc file:
 
 ```
