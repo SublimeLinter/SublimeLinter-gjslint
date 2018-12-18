@@ -1,0 +1,7 @@
+SublimeLinter-gjslint 1.2.0
+-------------------------------
+
+The settings to pass arguments like `disable` and `max_line_length` to
+gjslint have been removed. You can use the "args" setting to pass any
+argument you like:
+http://www.sublimelinter.com/en/latest/linter_settings.html#args
